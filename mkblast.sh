@@ -12,7 +12,7 @@ gunzip ncbi_blast/*.gz
 
 
 for i in ncbi_blast/*.fa; do
-    makeblastdb -in $i -dbtype nucl -title NCBI_`basename $i .fa` -parse_seqids ;
+    makeblastdb -in $i -dbtype nucl -title NCBI__assembly_`basename $i .fa` -parse_seqids ;
 done;
 
 
