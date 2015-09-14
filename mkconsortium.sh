@@ -5,7 +5,7 @@ cp -R consortium consortium_bees
 
 
 for i in consortium_bees/*scaffolds*; do
-    makeblastdb -in $i -dbtype nucl -title Consortium_assembly__`basename $i .fa` -parse_seqids ;
+    makeblastdb -in $i -dbtype nucl -title Consortium__assembly_`basename $i .fa` -parse_seqids ;
 done;
 
 
