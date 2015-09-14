@@ -8,10 +8,10 @@ gunzip ncbi_protein/*.gz
 
 
 for i in ncbi_protein/*rna.fa; do
-    makeblastdb -in $i -dbtype nucl -title \"`basename $i .fa`\" -parse_seqids ;
+    makeblastdb -in $i -dbtype nucl -title `basename $i .fa` -parse_seqids ;
 done;
 
 
 for i in ncbi_protein/*protein.fa; do
-    makeblastdb -in $i -dbtype prot -title \"`basename $i .fa`\" -parse_seqids ;
+    makeblastdb -in $i -dbtype prot -title NCBI_`basename $i .fa` -parse_seqids ;
 done;
