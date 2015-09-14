@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -rf ncbi_blast
 mkdir ncbi_blast
 
 find ncbi|grep ref|grep -v tmp|grep -v _chr\/|sort> out.txt

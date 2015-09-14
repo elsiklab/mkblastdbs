@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+rm -rf ensembl_blast
 mkdir ensembl_blast/
 cp -R ensembl/*.fa.gz ensembl_blast
 gunzip ensembl_blast/*.gz

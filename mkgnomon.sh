@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -rf ncbi_gnomon
 mkdir ncbi_gnomon
 find ncbi | grep Gnomon | sed -e 's/\(.*\)\/\(.*\)\/\(.*\).fsa.gz$/cp \1\/\2\/\3.fsa.gz ncbi_gnomon\/NCBI_\2_\3.fsa.gz/'|bash
 
