@@ -8,11 +8,11 @@ gunzip ensembl_blast/*.gz
 
 
 for i in ensembl_blast/*cds*.fa; do
-    makeblastdb -in $i -dbtype nucl -title Ensembl_`basename $i .fa` -parse_seqids ;
+    makeblastdb -in $i -dbtype nucl -title "`basename $i .fa` (Ensembl)" -parse_seqids ;
 done;
 
 for i in ensembl_blast/*pep*.fa; do
-    makeblastdb -in $i -dbtype prot -title Ensembl_`basename $i .fa` -parse_seqids ;
+    makeblastdb -in $i -dbtype prot -title "`basename $i .fa` (Ensembl)" -parse_seqids ;
 done;
 
 

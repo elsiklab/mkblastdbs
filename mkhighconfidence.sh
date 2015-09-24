@@ -14,7 +14,7 @@ paste protein.txt protein2.txt releases.txt > protein3.txt
 
 while read -r a b c; do
     echo Processing $a $b $c
-    cp $a ncbi_protein/`basename $b rna.fa.gz`AnnotationRelease${c}_prot.fa.gz;
+    cp $a ncbi_protein/`basename $b protein.fa.gz`AnnotRelease${c}_protein.fa.gz;
 done<protein3.txt
 
 
@@ -27,7 +27,7 @@ paste rna.txt rna2.txt releases.txt > rna3.txt
 
 while read -r a b c; do
     echo Processing $a $b $c
-    cp $a ncbi_protein/`basename $b prot.fa.gz`AnnotationRelease${c}_rna.fa.gz;
+    cp $a ncbi_protein/`basename $b rna.fa.gz`AnnotRelease${c}_rna.fa.gz;
 done<rna3.txt
 
 
