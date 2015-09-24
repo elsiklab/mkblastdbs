@@ -14,3 +14,5 @@ cp -R ncbi_protein/. blastdbs/
 cp -R consortium_bees/. blastdbs/
 ./mkogs.sh
 cp -R consortium_blast/. blastdbs/
+./mkbumble.sh
+cp -R consortium_bumble/. blastdbs/
