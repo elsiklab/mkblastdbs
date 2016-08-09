@@ -1,3 +1,6 @@
-# MKBLASTDBS
+# mkblastdbs
 
-Scripts for initializing the Blast DBs using data from NCBI et al
+Scripts for initializing the BLAST databases using data from NCBI, ensembl, and OGS datasets
+
+
+
