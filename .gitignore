@@ -1,4 +1,6 @@
 *.fa.gz
+*.fa.gz.1
 *.fsa.gz
 *CURRENT_RELEASE
 blastdbs
+ensembl_blast
