@@ -28,16 +28,8 @@ while read -r a b c; do
     cp $a "ncbi_gnomon/`basename $b rna.fa.gz`AnnotRelease${c}_rna.fa.gz";
 done<rna3.txt
 
-
-gunzip ncbi_gnomon/*.gz
-
-for i in ncbi_gnomon/*rna*.fa; do
-    makeblastdb -in $i -dbtype nucl -title "`basename $i .fa` (NCBI)" -parse_seqids ;
-done;
-
-for i in ncbi_gnomon/*prot*.fa; do
-    makeblastdb -in $i -dbtype prot -title "`basename $i .fa` (NCBI)" -parse_seqids ;
-done;
+parallel -j 2 'gunzip -c {} | makeblastdb -in - -out ensembl_blast/{} -dbtype nucl -title "{.}.fa (NCBI)" -parse_seqids' ::: ncbi_gnomon/*rna*.fa.gz
+parallel -j 2 'gunzip -c {} | makeblastdb -in - -out ensembl_blast/{} -dbtype prot -title "{.}.fa (NCBI)" -parse_seqids' ::: ncbi_gnomon/*prot*.fa.gz
 
 
 rm protein.txt
