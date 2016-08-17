@@ -8,7 +8,7 @@ for i in $SPECIES; do
     # first download symlink
     ret=`curl -s -l ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/invertebrate/$i/latest_assembly_versions/`
     # then wget it, because wget doesn't follow symlinks well
-    wget --quiet -A "*genomic.fna.gz,*cds_from_genomic.fna.gz,*protein.faa.gz,*rna.fna.gz,*rna_from_genomic.fna.gz" ftp://ftp.ncbi.nlm.nih.gov/genomes/all/$ret/*
+    wget -P ncbi_gnomes --quiet -A "*genomic.fna.gz,*cds_from_genomic.fna.gz,*protein.faa.gz,*rna.fna.gz,*rna_from_genomic.fna.gz" ftp://ftp.ncbi.nlm.nih.gov/genomes/all/$ret/*
 done;
 
 
