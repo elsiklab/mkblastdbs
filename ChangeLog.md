@@ -2,6 +2,7 @@
 
 Downloads sequences from Ensembl Metazoa release 32
 Downloads sequences from ncbi refseq ftp
+Use Makefile for workflow
 
 
 # Version 0.1
