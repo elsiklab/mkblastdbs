@@ -1,8 +1,5 @@
-*.fa.gz
-*.fa.gz.1
-*.fsa.gz
-*CURRENT_RELEASE
 blastdbs
 ensembl_blast
+ensembl
 ncbi_blast
 ncbi_genomes
